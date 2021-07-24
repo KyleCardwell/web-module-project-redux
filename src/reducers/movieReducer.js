@@ -13,7 +13,7 @@ const reducer = (state = initialState, action) => {
                 movies: state.movies.filter(item=>(action.payload !== item.id))
             }
         case ADD_MOVIE:
-            const movieToAdd = {...action.payload, id: Math.floor(Math.random() *1000*action.payload.lenth)}
+            const movieToAdd = {...action.payload, id: Math.floor(Math.random() *1000*state.movies.length)}
             console.log(movieToAdd)
             return {
                 ...state,
