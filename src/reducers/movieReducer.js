@@ -14,7 +14,6 @@ const reducer = (state = initialState, action) => {
             }
         case ADD_MOVIE:
             const movieToAdd = {...action.payload, id: Math.floor(Math.random() *1000*state.movies.length)}
-            console.log(movieToAdd)
             return {
                 ...state,
                 movies: [...state.movies, movieToAdd]
